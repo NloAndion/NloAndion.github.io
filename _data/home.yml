@@ -26,7 +26,7 @@ project_entries:
     desc: This project uses highlight markup, configured in _data/home.yml
     highlight: WIP
 
-  - title: Project 5
+  - title: test
     url: overview-post
     desc: Moonwalk also has horizontal list (used in header and footer)
     highlight: WIP
