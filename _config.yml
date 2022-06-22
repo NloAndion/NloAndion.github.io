@@ -1,9 +1,9 @@
-title: Moonwalk
-author: Abhinav Saxena
+title: Andion Test Site
+author: Ngai To Lo
 # url: https://www.abhinavsaxena.com/moonwalk # root address of the site
 url: https://nloandion.github.io/
 description: > # description of the site (multiple lines allowed)
-  Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
+  Test site for some Andion Webapps using Abhinav's moonwalk theme
 
 permalink: /:slug
 # permalink: /:output_ext
