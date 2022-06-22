@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+<meta charset='UTF-8'>
+<style>
+body {
+  background: linear-gradient(45deg, #336699, #006633);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 3em;
+  height: auto;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width : 75%;
+}
+form p {
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+form a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 12px;
+}
+form a:hover {
+  text-shadow: 2px 2px 6px #00000040;
+}
+form a:active {
+  text-shadow: none;
+}
+form input {
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+form input:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+form input[type=email]:focus, form input[type=password]:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+form input[type=button] {
+  margin-top: 10px;
+  width: 150px;
+  font-size: 1rem;
+}
+form input[type=button]:hover {
+  cursor: pointer;
+}
+form input[type=button]:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+form:hover {
+  margin: 4px;
+}
+
+::-moz-placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+:-ms-input-placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.drop {
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s ease;
+}
+.drop-1 {
+  height: 80px;
+  width: 80px;
+  top: -20px;
+  left: -100px;
+  z-index: -1;
+}
+.drop-2 {
+  height: 80px;
+  width: 80px;
+  bottom: -30px;
+  right: -10px;
+}
+.drop-3 {
+  height: 100px;
+  width: 100px;
+  bottom: 120px;
+  right: -50px;
+  z-index: -1;
+}
+.drop-4 {
+  height: 120px;
+  width: 120px;
+  top: -60px;
+  right: -60px;
+}
+.drop-5 {
+  height: 60px;
+  width: 60px;
+  bottom: -50px;
+  left: -10px;
+  z-index: -1;
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+span {
+    display:inline-block;
+}
+h1 { 
+    color: #fff;
+}
+.results > div{
+  position: relative;
+  text-align:left ;
+  margin-left: 20%;
+  margin-bottom: 0;
+  height: auto;
+}
+.heat-show .heat-desc{ 
+    display: none;
+    right: -30%;
+    position: absolute;
+    top: -15%;
+    /* 312px;*/
+    width: 420px;
+    z-index: 10;
+    
+}
+.heat-show:hover .heat-desc{ 
+    display: block;
+}
+
+.heat-show .heat-desc .bubble-outer {
+  position: relative;
+  width: 50%;
+  
+  border: 3px solid #D8D8D8;
+  border-radius: 5px;
+  font-size: 0.9375em;
+  /* 18px/19.2 */
+  padding: 15px;
+  box-shadow: 2px 2px 0 #ACACAC;
+  border-radius: 10px;
+}
+
+.heat-show .heat-desc .bubble-inner {
+  color: #fff;
+  width:50%;
+  background: linear-gradient(45deg, #336699, #006633);
+  border-color: #dbdbdb #e9e9e9 #f2f2f2;
+  border-bottom-width: 3px;
+  font-size: 0.9375em;
+  /* 18px/19.2 */
+  padding: 15px 5px 15px 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+.heat-desc .navigation-up-arrow {
+  /* background-position: -55px -694px; */
+  display: block;
+  height: 100px;
+  left: 9.5%;
+  position: relative;
+  text-indent: -9999px;
+  top: 50px;
+  width: 50%;
+}
+.navigation-up-arrow {
+  /* background-image: url("/images/neg/neg-home-sprite2.png"); */
+  overflow: hidden;
+}
+</style>
+</head>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+<title>Column Selection</title>
+
+
+<body>
+    
+<div class="container">
+  <a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
+    <h1>NHFree Model Selection Tool</h1>
+<form>
+<Label for="sliderBarOne">Digestate to Process (m3/d)</Label>
+<br>
+<input type="range" class = "inputbar" id="sliderBarOne" min="0" max="400" step="5" value="1" name = "load" oninput="this.form.rangeOne.value=this.value">
+
+<input type="number" class = "inputbar" id="rangeOne" oninput="this.form.sliderBarOne.value=this.value">
+<br>
+
+<div class="heat-show">
+  <Label for="sliderBarTwo">Heat Availability (kW)</Label>
+  <div class="heat-desc bubble-outer">
+    <div class="navigation-up-arrow"></div>
+    <ol class="bubble-inner">
+      Heat availability is defined as:
+        <li> Waste heat available from a cogeneration unit</li>
+        <li> Power output of a dedicated boiler</li>
+        <li> Combination of the above</li>
+      
+      </ol>
+    </div>
+</div>
+<br>
+<input type="range" class = "inputbar" id="sliderBarTwo" min="0" max="2000" step="10" value="1" name="power" oninput="this.form.rangeTwo.value=this.value">
+<input type="number" class = "inputbar" id="rangeTwo" oninput="this.form.sliderBarTwo.value=this.value">
+<br>
+
+<Label for="sliderBarThree">Digestate Temperature (C)</Label>
+<br>
+<input type="range" class = "inputbar" id="sliderBarThree" min="0" max="70" step="0.5" value="1" name = "Tin" oninput="this.form.rangeThree.value=this.value">
+<input type="number" class = "inputbar" id="rangeThree" oninput="this.form.sliderBarThree.value=this.value">
+<br>
+<label for="efficiency"> Ammonia Removal efficiency (%)</label><br>
+<input type="range" class = "inputbar" id="sliderBarFour" min="50" max="90" step="1" value="1" name = "efficiency" oninput="this.form.rangeFour.value=this.value">
+<input type="number" class = "inputbar" id="rangeFour" oninput="this.form.sliderBarFour.value=this.value">
+
+
+<div class="results">
+
+    <div>Select: <span id="result">0</span></div>
+</div>
+
+</form>
+
+<div class="drops">
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</div>
+
+
+<script>
+ const _0x5e4eb8=_0x57a7;(function(_0x34972e,_0x4038e8){const _0x8b5442=_0x57a7,_0x4f2306=_0x34972e();while(!![]){try{const _0x2e3056=-parseInt(_0x8b5442(0xd5))/0x1+-parseInt(_0x8b5442(0xe7))/0x2*(parseInt(_0x8b5442(0xd3))/0x3)+-parseInt(_0x8b5442(0xd2))/0x4*(parseInt(_0x8b5442(0xd8))/0x5)+parseInt(_0x8b5442(0xd9))/0x6+parseInt(_0x8b5442(0xe5))/0x7+-parseInt(_0x8b5442(0xe2))/0x8*(parseInt(_0x8b5442(0xe6))/0x9)+parseInt(_0x8b5442(0xe1))/0xa;if(_0x2e3056===_0x4038e8)break;else _0x4f2306['push'](_0x4f2306['shift']());}catch(_0x4c6eb9){_0x4f2306['push'](_0x4f2306['shift']());}}}(_0x3ccd,0xbb0ac));let nodeList=document['querySelectorAll'](_0x5e4eb8(0xe3));for(i=0x0;i<nodeList[_0x5e4eb8(0xd6)];i++){nodeList[i][_0x5e4eb8(0xde)](_0x5e4eb8(0xe4),get_vals);}function _0x57a7(_0x19938a,_0xa1fb5a){const _0x3ccdd5=_0x3ccd();return _0x57a7=function(_0x57a716,_0x40a022){_0x57a716=_0x57a716-0xd1;let _0x4dbaf9=_0x3ccdd5[_0x57a716];return _0x4dbaf9;},_0x57a7(_0x19938a,_0xa1fb5a);}function get_vals(){const _0x37fe52=_0x5e4eb8;let _0x21e4fc=document[_0x37fe52(0xdc)]('input[name=\x22load\x22]')[_0x37fe52(0xdf)],_0x2e9859=document[_0x37fe52(0xdc)](_0x37fe52(0xe0))[_0x37fe52(0xdf)],_0x4937f4=document[_0x37fe52(0xdc)](_0x37fe52(0xda))[_0x37fe52(0xdf)],_0x23cfc1=document[_0x37fe52(0xdc)]('input[name=\x22efficiency\x22]')['value'];evaluate_system(_0x21e4fc,_0x2e9859,_0x4937f4,_0x23cfc1);}function evaluate_system(_0x184418,_0x2fd8d6,_0x3ed01a,_0x453556){let _0x119793=eval_pc(_0x2fd8d6,_0x3ed01a,_0x453556,smallTank=!![]);_0x184418<_0x119793['pc']?display_pc(_0x119793,smallTank,custom=![]):(_0x119793=eval_pc(_0x2fd8d6,_0x3ed01a,_0x453556,smallTank=![]),_0x184418<_0x119793['pc']?display_pc(_0x119793,smallTank,custom=![]):display_pc(_0x119793,smallTank,custom=!![]));}function display_pc(_0x27e3ed,_0x349f12,_0x20ce29=![]){const _0x329f38=_0x5e4eb8;if(_0x349f12&&!_0x20ce29)document[_0x329f38(0xdc)]('#result')[_0x329f38(0xd1)]=_0x329f38(0xdd);else!_0x349f12&&!_0x20ce29?document[_0x329f38(0xdc)](_0x329f38(0xd7))[_0x329f38(0xd1)]=_0x329f38(0xdb):document[_0x329f38(0xdc)](_0x329f38(0xd7))['innerHTML']=_0x329f38(0xd4);return 0x0;}function _0x3ccd(){const _0x415626=['length','#result','1119485HNEEHz','7788792DSiXFz','input[name=\x22Tin\x22]','\x20Model\x20M','querySelector','\x20Model\x20S','addEventListener','value','input[name=\x22power\x22]','13243010IshveX','24WRDuMN','.inputbar','input','173663fSYtVm','1862937upHaPp','4TSGCSQ','innerHTML','4LfCMeg','1402557jzzIqj','\x20Model\x20L\x20Please\x20contact\x20sales\x20for\x20dimensions','101204yycmyy'];_0x3ccd=function(){return _0x415626;};return _0x3ccd();}function eval_pc(_0x1da51d,_0x425206,_0xd95f0e,_0x313ace=!![]){let _0x85d213=0x0,_0x18bf2c=0x0;const _0x3357e2=0x97,_0x217a13=0x4d;_0x313ace===![]?(_0x18bf2c=_0x3357e2,_0x85d213=0x97):(_0x18bf2c=_0x217a13,_0x85d213=0x4d);let _0x2cde51=_0x85d213*(0x46-_0x425206)/0x35c,_0x503af5=0x18*_0x1da51d/0x3e8,_0x54ca1d=_0x2cde51/_0x503af5,_0x14f796=_0x2cde51/_0x503af5*0x18,_0x38bec8;_0xd95f0e/0x64>=0.7?_0x38bec8=0xc:_0x38bec8=0x8;let _0x437d27=_0x14f796+_0x38bec8,_0x13369e=0x18/_0x437d27*_0x18bf2c;return{'pc':_0x13369e};}
+  </script>
+</body>
+</html>

@@ -31,10 +31,13 @@ project_entries:
     desc: Moonwalk also has horizontal list (used in header and footer)
     highlight: WIP
 
+  - title: NH3free for me
+    url: nhfree-selector
+    desc: small app to help choose the right NHfree system
+
   - title: Project 6
     url: overview-post
     desc: It also has a scalable vertical list (in case you need it)
-
 old_project_entries:
   - title: Soopr
     url: https://www.soopr.co
